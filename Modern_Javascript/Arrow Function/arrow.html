@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arow Function</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        // Regular Function
+        function regfunction(name, age) {
+            return "Hello " + name + ", you are " + age + " years old!";
+        }
+
+
+        // Arrow Function
+        const arrow = (name, age) => {
+            return `Hello ${name}, you are ${age} years old!`;
+        };
+        
+        
+        // Arrow function with single parameter and single expression
+        const arrow1 = name => `Hello ${name}, welcome to Modern Javascript`;
+
+
+        // Arrow function with single parameter and multiple statements
+        const arrow2 = age => {
+            if(age >= 18){
+                return  `Congrats, You are ${age} years old. You can vote, `;              
+            }
+            else{
+                return  `Sorry, You are ${age} years old. You can not vote, `;   
+            }
+        }
+
+
+        // Arrow function with no parameter and multiple Statements
+        const arrow3 = () => {
+            const age =19;
+            const name = "Hrishikesh";
+            if(age >= 18){
+                return  `Congrats ${name}, You are ${age} years old. You can vote, `;              
+            }
+            else{
+                return  `Sorry ${name}, You are ${age} years old. You can not vote, `;   
+            }
+        }
+
+        
+        // Arrow function with more than one parameters and multiple Statements
+        const arrow4 = (name,age) => {
+            if(age >= 18){
+                return  `Congrats ${name}, You are ${age} years old. You can vote, `;              
+            }
+            else{
+                return  `Sorry ${name}, You are ${age} years old. You can not vote, `;   
+            }
+        }
+
+
+        // Arrow function with more than one parameters and single expression
+        const arrow5 = (name, age) => {
+            return `Hello ${name}, you are ${age} years old!`;
+        };
+        console.log(regfunction("Hrishikesh", 21));  // prints"Hello Hrishikesh, you are 21 years old!"
+        console.log(arrow("Hrishikesh", 21));        // prints "Hello Hrishikesh, you are 21 years old!"
+        console.log(arrow1("there"));
+        console.log(arrow2(22));
+        console.log(arrow3());
+        console.log(arrow4("Ananya",25));
+        console.log(arrow5(" Modern Javascript", 6));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

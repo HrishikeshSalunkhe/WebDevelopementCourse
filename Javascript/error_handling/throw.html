@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="age-UA-Compatible" content="IE=edge">
+    <title>JavaScript Error Handling</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function valAge() {
+            document.write("Error Handling with try catch and throw ");
+            try {
+                var x;
+                x = document.getElementById("age").value;
+                document.write(typeof (x) + "<br>");
+                document.write(x + "<br>");
+
+                if (x < 18) throw "Not Eligible";
+                if (x >= 18) throw "Eligible";
+            }
+            catch (error) {
+                document.write(error);
+                document.getElementById("erro").innerHTML = "Input is " + error;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    Age <input type="number" id="age"> <br>
+    <input type="button" value="Submit" onclick="valAge()"> <br>
+    <p id="erro"> </p>
+
+
+
+    <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript OnFocus and OnBlur</title>
+        <meta name="author" content="Hrishikesh Salunkhe">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            //x points to current object referenced by this keyword
+            function handleOnFocus(x){
+                x.style.backgroundColor = "black";
+                x.style.color = "white";
+            }
+            function handleOnBlur(y){
+                y.style.backgroundColor = "white";
+                y.style.color = "black";
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="text" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" >
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rest Operator</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function spread(name, age){
+            console.log(`Hello ${name}, you are ${age} years old`);
+        }
+        let myArr = ["Hrishikesh", 21];
+        // Spread operator on function calls
+        spread(...myArr);
+
+        // Spread operator on function literals
+        let myDetails = [...myArr, 6.1, "Pune"];
+        console.log(myDetails);
+
+        // Spread operator on Object literals
+
+        let myObj = {
+            name:"Hrishikesh",
+            age: 21
+        };
+        let myDetailsObj = {...myObj};
+        console.log(myDetailsObj);
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

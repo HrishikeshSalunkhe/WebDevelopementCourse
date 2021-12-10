@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rest Operator</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        // We can pass as many as number of parameters to averageSalary function
+        function averageSalary(...args){
+            const totalMonths = args.length;
+            let average;
+            let sum = 0;
+            for(let i = 0; i < args.length; i++){
+                console.log(args[i]);
+                sum = sum + args[i];
+            }
+            average = sum/ totalMonths;
+            return average;
+            
+        }
+        let aveSalary =  averageSalary(20000,22000,22000,22000,26000,50000);
+        console.log("The average salary is: ", aveSalary);
+
+
+        aveSalary =  averageSalary(45000, 48000,50000,80000);
+        console.log("The average salary is: ", aveSalary);
+        
+        aveSalary =  averageSalary(1000,1222,111,11111,111111,99999,1000,1222,111,11111,111111,99999);
+        console.log("The average salary is: ", aveSalary);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

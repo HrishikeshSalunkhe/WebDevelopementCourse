@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Objects using function</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        //Javascript Single Line Comment
+        function blog(title, text) {
+            this.title = title;
+            this.text = text;
+            this.addCategory = addCategory;
+            this.display = display;
+        }
+        function addCategory(category) {
+            this.category = category;
+        }
+        function display() {
+            document.write(this.title + "<br>");
+            document.write(this.text + "<br>");
+            document.write(this.category)
+
+        }
+        let blogpost1 = new blog("Java", "Lorem Ipisum har dljjdf jsklgh");
+        blogpost1.addCategory("Script");
+        blogpost1.display();
+
+    </script>
+
+</head>
+
+<body>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

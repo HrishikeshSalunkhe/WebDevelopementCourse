@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="number-UA-Compatible" content="IE=edge">
+    <title>JavaScript Form Validation</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function handleFomrm(){
+            var number = document.myForm.mobnum.value;
+            if(isNaN(number) || number<1 || number > 10){
+                alert("Enter Number in Between 1 and 10 ")
+                return false;
+            } 
+            else{
+                alert("validation Successful");
+                return true;
+            }
+          
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Registeration Form</h2><br>
+    <form name="myForm" action="number.php" onsubmit="return handleFomrm()">
+        Mobile Number: <input type="number" name="mobnum" required autofocus><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="" async defer></script>
+</body>
+
+</html>

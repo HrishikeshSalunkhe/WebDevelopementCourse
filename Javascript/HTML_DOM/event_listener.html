@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript  Event Listener</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function handleEventListener() {
+            document.getElementById("heading").addEventListener("click",handleEvent);
+            function handleEvent(){
+                document.getElementById("heading").style.color = "green";
+            }
+        }
+        window.addEventListener("load",handleEventListener);
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" id="heading" value="Click Me">
+    <script src="" async defer></script>
+</body>
+
+</html>

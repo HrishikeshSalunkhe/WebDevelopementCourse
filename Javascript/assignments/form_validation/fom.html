@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="number-UA-Compatible" content="IE=edge">
+    <title>JavaScript Form Validation</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function handleFomrm() {
+            var valid = false;
+            var exp1 = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            var exp2 = /^[A-Za-z0-9]{5,8}$/;
+            var exp3 = /^\d{10}$/;
+            var email = document.myForm.email.value;
+            var password = document.myForm.pass.value;
+            var phone = document.myForm.phone.value;
+            var result1 = exp1.test(email);
+            var result2 = exp2.test(password);
+            var result3 = exp3.test(phone);
+
+            if (result1 == false) {
+                alert("Email is entered incorrectly");
+                document.getElementById("err1").innerHTML = " Enter Email correctly";
+                document.myForm.email.focus();
+            }
+            if (result2 == false) {
+                alert("password is entered wrong");
+                document.getElementById("err2").innerHTML = " Enter password correctly";
+                document.myForm.pass.focus();
+            }
+            if (result3 == false) {
+                alert("phone number is entered wrong");
+                document.getElementById("err3").innerHTML = " Enter phone number with 10 digits";
+                document.myForm.phone.focus();
+            }
+            if(result1 && result2 && result3) {
+                alert("Validation Successful");
+                valid = true;
+            }
+            else if((result1 && result2 && result3)== false) {
+                alert("Validation Failed")
+                document.getElementById("err4").innerHTML = " Enter information correctly";
+               
+            }
+            return valid;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Registeration Form</h2><br>
+    <form name="myForm" action="dropdown.php" onsubmit="return handleFomrm()">
+        E-mail: <input type="email" name="email" autofocus required> <br>
+        Password: <input type="password" name="pass" autofocus required><br>
+        Phone: <input type="number" name="phone" autofocus required><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="err1"></p>
+    <p id="err2"></p>
+    <p id="err3"></p>
+    <p id="err4"></p>
+    <script src="" async defer></script>
+</body>
+
+</html>

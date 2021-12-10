@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript OnMouse Event</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function mouseDown() {
+            document.getElementById("cm").innerHTML = "The mouse button is held down.";
+        }
+
+        function mouseUp() {
+            document.getElementById("cm").innerHTML = "You released the mouse button.";
+        }
+    </script>
+
+</head>
+
+<body>
+    <p id="cm" onmousedown="mouseDown()" onmouseup="mouseUp()">Click me.</p>
+    <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Const Keyword</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        
+        const message = "Hello javascript";   //Global Variable
+        console.log(message);    // prints "Hello javascript" on console
+        // here it can not be re-assigned.
+        // message = "Hello Modern Javascript";  // TypeError: invalid assignment to const 'message'
+        console.log(message);    // prints "Hello Modern Javascript" on console
+        {
+            const message2 = "It can not be accessed outside the block scope"; // block scope
+            // Access a message keyword
+            console.log(message);
+        }
+        console.log(message2);  //ReferenceError: message2 is not defined
+        
+        // Declaring a varaible withour assignment of value gives an syntax error
+        const versionjs;   // missing = in const declaration
+        versionjs = 6.0;  
+</script>
+</head>
+
+<body>
+</body>
+
+</html>

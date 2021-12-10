@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Copy to Clipboard</title>
+    <meta name="description" content="Copy to Clipboard using Javascript">
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            font-family: monospace, sans-serif;
+            text-align: center;
+            background-color: salmon;
+        }
+
+        .main {
+            background-color: aliceblue;
+            border: 2px solid gray;
+            border-radius: 10%;
+            margin: 10% 25%;
+        }
+        button{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            color: black;
+            border-radius: 25%;
+            padding: 8px;  
+            background-color: white;
+        }
+        button:hover{
+            
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Source Text</h1><br>
+        <textarea name="copyText" rows="4" cols="48" placeholder="Hello there"></textarea><br />
+        <br>
+        <button class="moverButton"> Move Text</button>&nbsp;
+        <button class="copyButton"> Copy Text</button> <br /><br>
+        <textarea name="outputText" rows="4" cols="48" placeholder="Hello there"></textarea><br><br>
+    </div>
+
+    <script src="main.js" async defer>
+
+    </script>
+
+</body>
+
+</html>

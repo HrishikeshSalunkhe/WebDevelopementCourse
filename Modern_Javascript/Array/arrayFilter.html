@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array filter Function</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+        const result = words.filter(word => word.length > 6);
+
+        console.log(result);
+
+
+        // Finding prime numbers in array
+        const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+        function isPrime(num) {
+            for (let i = 2; num > i; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return num > 1;
+        }
+
+        console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Functions</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        var x = 99; //global variable
+        // Function 1
+        function fun1(){
+            var y = 100; // local variable
+            document.write("The value of y: " + y + "<br>");
+            document.write("The valur of x: " + x + "<br>");
+            x=x+1; // chanhge the value of global variable by 1
+        }
+        fun1();
+        document.write("The value of x(outside the funtion): " + x);
+    </script>
+
+</head>
+
+<body>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

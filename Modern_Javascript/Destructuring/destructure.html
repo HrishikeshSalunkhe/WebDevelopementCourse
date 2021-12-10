@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Destructuing</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        // Array Destructuring
+        const Arr = ["Hrishikesh", "Salunkhe", 22,"Pune, Maharashtra"];
+        const [firstName, lastName] = Arr;
+        console.log(firstName);
+        console.log(lastName);
+
+
+        // Object Destructuring
+        const myDetails ={
+            first : "Hrishikesh",
+            last : "Salunkhe",
+            age : 22,
+            address : "Pune. Maharashtra"
+        };
+        const {first, last, age} = myDetails;
+        console.log(first);
+        console.log(last);
+        console.log(age);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

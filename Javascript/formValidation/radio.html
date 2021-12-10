@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="number-UA-Compatible" content="IE=edge">
+    <title>JavaScript Form Validation</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function handleFomrm() {
+            let valid = false;
+            let pay = document.myForm.paymethod;
+            for(let i = 0 ; i < pay.length; i++){
+                if(pay[i].checked){
+                    valid = true;
+                    break;
+                }
+            }   
+            if(valid){
+                alert("success");
+                return true;
+            }
+            else{
+                alert("failure");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Registeration Form</h2><br>
+    <form name="myForm" action="dropdown.php" onsubmit="return handleFomrm()">
+        <input type="radio" name="paymethod" value="cod">Cash on Delivery<br>
+        <input type="radio" name="paymethod" value="credit">Credit Card<br>
+        <input type="radio" name="paymethod" value="debit">Debit Card<br>
+        <input type="radio" name="paymethod" value="upi">UPI<br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="" async defer></script>
+</body>
+
+</html>

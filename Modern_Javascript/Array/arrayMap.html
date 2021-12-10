@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array Map Function</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        // Array map on array
+        const myArray = [1, 2, 3, 4, 5];
+        const myArray2 = myArray.map(
+            item => item * item);
+        console.log(myArray);
+        console.log(myArray2);
+
+         // Array map on objects
+        const myObject = [{name : "Hrishikesh Salunkhe", age: 22}, 
+        {name : "pqr zyx", age: 22},
+        {name : "Abc xyz", age: 28} ];
+        const myObject2 = myObject.map (item =>
+         [name, age] =  [item.name , item.age] );
+         console.log(myObject);
+         console.log(myObject2);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

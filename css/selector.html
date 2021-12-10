@@ -1,0 +1,52 @@
+<!<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Selector</title>
+        <meta name="author" content="Hrishikesh Salunkhe">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            *{
+                background-color:cadetblue;
+            }
+            #para1 {
+              text-align: center;
+              color: red;
+            }
+            .para{
+                text-align: center;
+                color:chocolate
+            }
+            h1.heading{
+                text-align: center;
+                color: red;
+            }
+            .large{
+                font-family: sans-serif;
+                font-style: italic;
+            }
+            h2,h3{
+                text-align: center;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>   
+        <!--CSS id selector-->
+        <p id="para1">Hello World!</p>
+        <!--CSS class Selector-->
+        <p class="para">This paragraph is affected by the style.</p>
+        <!--CSS for specific element of class-->
+        <h1 class="heading">Specific element</h1>
+        <p class="heading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam at doloremque magni eveniet, sint quo dignissimos inventore dicta laborum autem ex quia minus rerum et ipsam vel maiores eaque cum! </p>
+        <!--CSS for More than One class Elements-->
+        <h1 class="heading large">Heading</h1>
+        <p class="heading"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dolorum at eaque vitae quam quo, libero sequi mollitia sapiente aspernatur harum quidem ratione laborum distinctio id minus blanditiis reiciendis fugit.</p>
+        <!--CSS for Grouping Selector-->
+        <h2>Hrishikesh</h1>
+        <h3>Computer Engineer</h3>
+
+    </body>
+</html>

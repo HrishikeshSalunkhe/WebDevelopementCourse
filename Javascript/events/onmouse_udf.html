@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript OnMouse User Defined function</title>
+        <meta name="author" content="Hrishikesh Salunkhe">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            //x points to current object referenced by this keyword
+            function handleMouseOver(x){
+                x.style.backgroundColor = "black";
+                x.style.color = "white";
+                x.innerHTML = "MouseOver";
+            }
+            function handleMouseOut(y){
+                y.style.backgroundColor = "white";
+                y.style.color = "green";
+                y.innerHTML = "MouseOut";
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1 onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)" >Click me to see the Effect of </h1>
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript OnLoad</title>
+        <meta name="author" content="Hrishikesh Salunkhe">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            function x(){
+                setTimeout(handleOnLoad,5000);
+            }
+            function handleOnLoad(){
+                
+                window.location = "https://www.google.com";
+            }
+        </script>
+
+    </head>
+    <body onload="x()" >
+        <h1>Redirecting you to the Google Search</h1>
+    </body>
+</html>

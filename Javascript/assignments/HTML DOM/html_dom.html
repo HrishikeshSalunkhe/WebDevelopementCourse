@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript HTML_Nodes</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function removeParagraph(){
+            let parent = document.getElementById('div1');
+            let child = document.getElementById('p2');
+            parent.removeChild(child);
+ 
+        }
+        function addParagraph(){
+            let parent = document.getElementById('div1');
+            let child = document.createElement("p");
+            let text = document.createTextNode("TV - /$ 1000");
+            child.appendChild(text);
+            parent.appendChild(child);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">Laptop - /$ 1000</p>
+        <p id="p2">CellPhone - /$ 300</p>
+    </div>
+    <input type="button" id="clicked" value="Add " onclick="addParagraph()">
+    <input type="button" id="clicked" value="Remove" onclick="removeParagraph()">
+    <script src="" async defer></script>
+</body>
+
+</html>

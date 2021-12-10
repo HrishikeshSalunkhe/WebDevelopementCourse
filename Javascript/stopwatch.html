@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Stopwatch</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        /* Original pen by Cathy Dutton*/
+        /* Original pen by Cathy Dutton*/
+        window.onload = function () {
+            var minutes = 00;
+            var seconds = 00;
+            var tens = 00;
+            var appendTens = document.getElementById("tens");
+            var appendSeconds = document.getElementById("seconds");
+            var appendMinutes = document.getElementById("minutes");
+            var buttonStart = document.getElementById('button-start');
+            var buttonStop = document.getElementById('button-stop');
+            var buttonReset = document.getElementById('button-reset');
+            var Interval;
+
+            buttonStart.onclick = function () {
+
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+            }
+
+            buttonStop.onclick = function () {
+                clearInterval(Interval);
+            }
+
+
+            buttonReset.onclick = function () {
+                clearInterval(Interval);
+                tens = "00";
+                seconds = "00";
+                minutes = "00";
+                appendTens.innerHTML = tens;
+                appendSeconds.innerHTML = seconds;
+                appendMinutes.innerHTML = minutes;
+            }
+
+
+
+            function startTimer() {
+                tens++;
+
+                if (tens <= 9) {
+                    appendTens.innerHTML = "0" + tens;
+                }
+
+                if (tens > 9) {
+                    appendTens.innerHTML = tens;
+
+                }
+
+                if (tens > 99) {
+                    seconds++;
+                    appendSeconds.innerHTML = "0" + seconds;
+                    tens = 0;
+                    appendTens.innerHTML = "0" + 0;
+                }
+
+                if (seconds > 9) {
+                    appendSeconds.innerHTML = seconds;
+                }
+                if (seconds > 59) {
+                    minutes++;
+                    appendMinutes.innerHTML = "0" + minutes;
+                    seconds = 0;
+
+                    appendSeconds.innerHTML = "0" + 0;
+                }
+
+            }
+
+
+        }
+    </script>
+    <style>
+        body {
+            background: black;
+            font-family: monospace, sans-serif;
+            height: 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+            margin: 30px auto;
+            color: white;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'monospace', sans-serif;
+            font-weight: 100;
+            font-size: 2.6em;
+            text-transform: capitalize;
+            text-decoration: underline;
+        }
+
+        #seconds,
+        #tens,
+        #colon,
+        #minutes {
+            font-size: 2em;
+        }
+
+        button {
+            background: white;
+            color: black;
+            border: solid 1px white;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            padding: 18px 10px;
+            width: 180px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: black;
+            border: solid 1px white;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <p><span id="seconds">00</span><span id="colon">:</span><span id="tens">00</span></p>
+        <button id="button-start" onclick="buttonStart()">Start</button>
+        <button id="button-stop" onclick="buttonStop() ">Stop</button>
+        <button id="button-reset" onclick="buttonReset()">Reset</button>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

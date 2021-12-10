@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Objects </title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        //Javascript Single Line Comment
+        function product(id,name,description,price) {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.price = price;
+            this.calDiscount = function (percentage) {
+            this.percentage = percentage/100;
+            var totalValue = this.price - (this.price * this.percentage);
+            this.price = totalValue
+        };
+            this.display = display;
+        }
+        function display() {
+            document.write(this.id + "<br>");
+            document.write(this.name + "<br>");
+            document.write(this.description + "<br>");
+            document.write(this.price + "<br>");
+        }
+
+        
+        let blogpost1 = new product("phone","Iphone","Apple, 4GB RAM, 64GB ROM",500);
+        blogpost1.calDiscount(10);
+        blogpost1.display();
+
+    </script>
+
+</head>
+
+<body>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

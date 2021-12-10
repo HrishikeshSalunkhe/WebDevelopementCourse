@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Array</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        //Creating array using new operator
+        var array = new Array(1,2.3, "JavaScript");
+        document.write(array + "<br>");         //print the array
+        document.write(array.length + "<br>");  //length of array 
+        document.write(array[2] + "<br>");      //access elements using index
+
+        //Creating array using square bracket (direct)
+        var array2 = [4,5.6, "Hello", false];
+        document.write(array2 + "<br>");
+
+        //Creating array with new operator but assigning elements using index.
+        var array3 = new Array();
+        array3[0] = 7;
+        array3[1] = 8.9;
+        array3[2] = "Hello Javascript";
+        document.write(array3);
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

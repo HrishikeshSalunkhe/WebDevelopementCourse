@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Template String</title>
+    <meta name="author" content="Hrishikesh Salunkhe">
+    <meta name="description" content="Modern javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        // function which returns a string using string concatenation
+        function fullNameRegular(firstName, lastName){
+            return 'Hello '+ firstName+' '+lastName+', Happy Birthday To You!';
+        }
+        // function which returns a string using template string
+        function fullName(firstName, lastName){
+            return `Hello ${firstName} ${lastName}, Happy Birthday To You!`;
+        }
+        let firstName = "Hrishikesh";
+        let lastName = "Salunkhe";
+        // prints "Hello Hrishikesh Salunkhe, Happy Birthday To You!"
+        console.log(fullName(firstName, lastName));    // template string function call 
+        // prints "Hello Hrishikesh Salunkhe, Happy Birthday To You!"
+        console.log(fullNameRegular(firstName, lastName));  // string concatenation function call
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

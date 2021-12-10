@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Onclick</title>
+        <meta name="author" content="Hrishikesh Salunkhe">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            //x points to object which refers to current object
+            function Calculator(x){
+                var num1 = parseInt(document.calc.num1.value);
+                var num2 =  parseInt(document.calc.num2.value);
+                var sum = document.calc.result;
+                if(x.value == "Add"){
+                    sum.value = num1 + num2;
+                }
+                else if(x.value == 'Sub'){
+                    sum.value = num1 - num2;
+                }else if(x.value == 'Mul'){
+                    sum.value = num1 * num2;
+                    
+                }else if(x.value == 'Div'){
+                    sum.value = num1 / num2;
+                }
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        <form name="calc">
+            Number 1 : <input type="text" name="num1"><br>
+            Number 2 : <input type="text" name="num2"><br>
+            Result : <input type="text" name = "result"><br>
+            <input type="button" name="add" value="Add" onclick="Calculator(this)">
+            <input type="button" name="sub" value="Sub" onclick="Calculator(this)">
+            <input type="button" name="mul" value="Mul" onclick="Calculator(this)">
+            <input type="button" name="div" value="Div" onclick="Calculator(this)">
+        </form>
+        <script src="" async defer></script>
+    </body>
+</html>

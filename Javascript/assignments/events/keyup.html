@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript OnKeyUp and OnKeyDown</title>
+        <meta name="author" content="Hrishikesh Salunkhe">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            //x points to current object referenced by this keyword
+            function handleOnKeyDown(x){
+                x.style.backgroundColor = "black";
+                x.style.color = "white";
+            }
+            function handleOnKeyUp(y){
+                y.style.backgroundColor = "white";
+                y.style.color = "black";
+            }
+            function handlOnKeyPress(z){
+                z.style.backgroundColor = "black";
+                z.style.color = "white";
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="text" onkeydown="handleOnKeyDown(this)" onkeyup="handleOnKeyUp(this)" >
+        <input type="text" onkeypress="handlOnKeyPress(this)" >
+        <script src="" async defer></script>
+    </body>
+</html>
